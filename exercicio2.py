@@ -10,7 +10,8 @@ while True:
     print("2. Inserir no início")
     print("3. Remover pelo nome ")
     print("4. Remover o último da lista ")
-    print("5. Sair")
+    print("5. Limpar a lista")
+    print("6. Sair")
     
     # Recebe a variável "opcao" que pede para o usuario digitar uma opção de 1 a 5.
     opcao = input("Escolha uma opção (1 a 5): ")
@@ -43,10 +44,20 @@ while True:
             removido = tarefas.pop()
             print(f"'{removido}' foi retirado da lista!")
         else:
+            print("A lista está vazia.")
+
+    # Se opção for igual a 5, se o tamanho da lista for maior do que 0, utiliza o método clear() na lista tarefas e mostra no terminal a lista tarefas
+    elif opcao == "5":
+        if len(tarefas) > 0:
+            tarefas.clear()
+            print(f"{tarefas}")
+        # Se caso o tamanho da lista for menor do que zero, mostra no terminal 
+        else:
             print("A lista já está vazia.")
 
-    # Se opcao for igual a 5, mostra no terminal: "Programa encerrado!" e utiliza o break para parar o laço de repetição while
-    elif opcao == '5':
+
+    # Se opcao for igual a 6, mostra no terminal: "Programa encerrado!" e utiliza o break para parar o laço de repetição while
+    elif opcao == '6':
         print("Programa encerrado!")
         break
 
