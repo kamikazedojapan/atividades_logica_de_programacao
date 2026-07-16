@@ -8,36 +8,29 @@ def menu_opcoes():
     print("4 - Divisão")
     print("5 - Sair")
 
-def soma():
-    n1 = float(input("1° Número: "))
-    n2 = float(input("2° Número: "))
+def soma(n1, n2):
     soma = n1 + n2
     print(f"\nSoma: {soma}")
     return soma
 
-def diferenca():
-    n1 = float(input("1° Número: "))
-    n2 = float(input("2° Número: "))
+def diferenca(n1, n2):
     diferenca = n1 - n2
     print(f"\nDiferença: {diferenca}")
     return diferenca
 
-def multiplicacao():
-    n1 = float(input("1° Número: "))
-    n2 = float(input("2° Número: "))
+def multiplicacao(n1, n2):
     multiplicacao = n1 * n2
     print(f"\nMultiplicação: {multiplicacao}")
     return multiplicacao
 
-def divisao():
-    n1 = float(input("1° Número: "))
-    n2 = float(input("2° Número: "))
+def divisao(n1, n2):
     divisao = n1 / n2
     print(f"\nDivisão: {divisao}")
     return divisao
 
 def confirmacao():
-    confirmacao = input("Deseja continuar (s/n): ").lower()
+    confirmacao = input("\nDeseja continuar (s/n): ").lower()
+    print('\n')
     if confirmacao != "s" and confirmacao != 'n':
         print("Opção inválida.")
     elif confirmacao == 's':
@@ -49,17 +42,19 @@ def confirmacao():
 while c == True:
     menu_opcoes()
     opcao = input("\nDigite uma opção: ")
+    numero1 = float(input("\n1° Número: "))
+    numero2 = float(input("2° Número: "))
     if opcao == '1':
-        soma()
+        soma(numero1, numero2)
         confirmacao()
     elif opcao == '2':
-        diferenca()
+        diferenca(numero1, numero2)
         confirmacao()
     elif opcao == '3':
-        multiplicacao()
+        multiplicacao(numero1, numero2)
         confirmacao()
     elif opcao == '4':
-        divisao()
+        divisao(numero1, numero2)
         confirmacao()
     elif opcao == '5':
         exit()
