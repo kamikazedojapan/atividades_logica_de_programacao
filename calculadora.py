@@ -1,4 +1,4 @@
-  = True
+c = True
 
 def menu_opcoes():
     print("======= Calculadora =======")
