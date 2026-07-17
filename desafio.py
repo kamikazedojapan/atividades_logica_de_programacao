@@ -1,5 +1,4 @@
 alunos = []
-c = True
 
 def menu():
   print("===== Sistema de Cadastro =====")
@@ -51,7 +50,7 @@ def remover():
     else:
       print("Aluno não encontrado no sistema.")
 
-while c == True:
+while True:
   menu()
   opcao = input("\nDigite uma das opções acima: ")
   if opcao == '1':
